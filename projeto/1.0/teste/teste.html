@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../dependencias/jquery-3.1.1.min.js" type="text/javascript"></script>
+<title>Animate jQuery</title>
+</head>
+<script>
+$(document).ready(function(){
+    $("#ball1").animate({
+     "left": "80px"
+    }, 300, null, function(){
+     $("#ball2").animate({
+         "left": "200px"
+     }, 400);
+     $("#ball1").animate({
+         "left": "75px"
+     }, 300);
+    });
+});
+</script>
+ 
+<style type="text/css">
+#box{
+    border:1px solid #512B11;
+    height:200px;
+    left:10px;
+    position:relative;
+    top:10px;
+    overflow:hidden;
+    width:600px;
+}
+ 
+#earth{
+    background:#523723;
+    border-top:20px solid #090;
+    bottom:0;
+    height:50px;
+    position:absolute;
+    width:600px;
+}
+ 
+#ball1, #ball2{
+    border-radius:30px;
+    height:50px;
+    position:absolute;
+    top:80px;
+    width:50px;
+}
+#ball1{
+    background:#095fc6;
+    left:-50px;
+}
+#ball2{
+    background:#282828;
+    left:130px;
+}
+</style>
+ 
+<body>
+ 
+<div id="box">
+    <div id="ball1"></div>
+    <div id="ball2"></div>
+    <div id="earth"></div>
+</div>
+ 
+</body>
+</html>
